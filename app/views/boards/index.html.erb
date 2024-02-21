@@ -1,45 +1,62 @@
-<div class="card" style="width: 18rem;">
-<div >
-  <div class="card-header">
-    <h1>
-      All boards
-    </h1>
-  </div>
-</div>
+<div class="container d-flex justify-content-center">
+  <div class="card " style="width: 50%;">
 
-<hr>
-
-<div>
-  <div>
-    <h2>
-      Add a new board
-    </h2>
-
-    <form action="/insert_board" method="post">
-      <div>
-        <label for="name_box">
-          Name
-        </label>
-
-        <input type="text" id="name_box" name="query_name">
-      </div>
-
-      <button>
-        Add board
+    <div class="card-header d-flex align-items-center">
+      <h4 >
+        All boards
+      </h4>
+      <button type="button" class="ms-auto btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Add a new board
       </button>
-    </form>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content" >
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">New board</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="/insert_board" method="post">
+              <div>
+                <div class="d-grid pt-2">
+                  <label for="name_box">
+                    Name
+                  </label>
+                </div>
+
+                <div class="d-grid pt-2">
+                  <input type="text" id="name_box" name="query_name" class="form-control">
+                </div>
+
+                <div class="d-grid pt-3">
+                  <button class="btn btn-success" >
+                    Add board
+                  </button>
+                </div>
+
+              </div>
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="list-group list-group-flush">
+      <% @list_of_boards.each do |a_board| %>
+      <a href="/boards/<%= a_board.id %>" class="d-flex list-group-item list-group-item-action" aria-current="true">
+         <%= a_board.name %>
+        <div class="ms-auto">
+          <svg class="svg-inline--fa fa-chevron-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path></svg>
+        </div>
+      </a>
+      <% end %>
+    </div>
   </div>
 </div>
-
-<hr>
-
-<ul>
-  <% @list_of_boards.each do |a_board| %>
-    <li>
-      <a href="/boards/<%= a_board.id %>">
-        <%= a_board.name %>
-      </a>
-    </li>
-  <% end %>
-  </div>
-</ul>
