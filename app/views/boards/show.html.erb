@@ -80,503 +80,55 @@
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade active show" id="active-tab-pane" role="tabpanel" aria-labelledby="active-tab" tabindex="0">
     <div class="row row-cols-1 row-cols-md-4 g-4">
-      <div class="col">
-        <div class="card">
-          <div class="card-header">
-            <h1 class="h6 my-1">Chief Supervisor</h1>
+      <% @active_posts.each do |a_post| %>
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              <h1 class="h6 my-1"><%= a_post.title %></h1>
 
-            <div>
-              Expires on Feb 24, 2024
+              <div>
+                Expires on <%= a_post.expires_on.strftime("%b %e, %Y") %>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <%= a_post.body %>
+            </div>
+
+            <div class="card-footer">
+              Posted on <%= a_post.created_at.strftime("%b %e, %Y") %>
             </div>
           </div>
-
-          <div class="card-body">
-            <p>Tardus color subnecto. Autem voluptas ustulo. Quae universe cernuus.</p>
-
-            <p>Commodo et sit. Vulticulus viduo deprecator. Certus dens sint.</p>
-
-            <p>Aliquam appono autus. Tabesco conitor qui. Curriculum allatus vel.</p>
-
-            <p>Viridis umerus vilitas. Damnatio demulceo dolorem. Volo varietas vinitor.</p>
-          </div>
-
-          <div class="card-footer">
-            Posted on Dec 26, 2023
-          </div>
         </div>
-      </div>
-      
-      <div class="col">
-        <div class="card">
-          <div class="card-header">
-            <h1 class="h6 my-1">Gorgeous Concrete Bag</h1>
-
-            <div>
-              Expires on Mar 23, 2024
-            </div>
-          </div>
-
-          <div class="card-body">
-            <p>Coniuratio voluptatem corpus. Sumo speciosus curso. Theca utpote tersus.</p>
-
-            <p>Aegre inventore turpe. Abeo abbas sustineo. Una advenio corrumpo.</p>
-
-            <p>Textor amitto currus. Comminor suus sol. Corrumpo defero cado.</p>
-
-            <p>Vinitor ubi volup. Vilis conventus alioqui. Deleo viduo amet.</p>
-
-            <p>Cometes tutamen armarium. Auditor cum conitor. At solium abutor.</p>
-          </div>
-
-          <div class="card-footer">
-            Posted on Jan 24, 2024
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <div class="card-header">
-            <h1 class="h6 my-1">Corporate Producer</h1>
-
-            <div>
-              Expires on Mar 27, 2024
-            </div>
-          </div>
-
-          <div class="card-body">
-            <p>Comes iure calamitas. Absum thermae voluptatem. Dapifer sublime numquam.</p>
-          </div>
-
-          <div class="card-footer">
-            Posted on Feb  1, 2024
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <div class="card-header">
-            <h1 class="h6 my-1">Synergistic Aluminum Chair</h1>
-
-            <div>
-              Expires on Apr  6, 2024
-            </div>
-          </div>
-
-          <div class="card-body">
-            <p>Fugit vilitas culpo. Spiculum accipio quidem. Adsum abstergo carus.</p>
-
-            <p>Virgo theca ipsa. Aureus annus alter. Defendo veritatis id.</p>
-
-            <p>Cum angelus umerus. Omnis aut accipio. Verecundia quia cumque.</p>
-
-            <p>Demitto currus cibus. Libero defetiscor deduco. Timor vita campana.</p>
-
-            <p>Infit recusandae adimpleo. Aptus sed denuo. Infit verus audentia.</p>
-          </div>
-
-          <div class="card-footer">
-            Posted on Jan 26, 2024
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <div class="card-header">
-            <h1 class="h6 my-1">Intelligent Plastic Clock</h1>
-
-            <div>
-              Expires on Apr  8, 2024
-            </div>
-          </div>
-
-          <div class="card-body">
-            <p>Quo ut terra. Tutis molestiae debitis. Abscido temptatio catena.</p>
-          </div>
-
-          <div class="card-footer">
-            Posted on Jan 29, 2024
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <div class="card-header">
-            <h1 class="h6 my-1">Accounting Administrator</h1>
-
-            <div>
-              Expires on Apr 13, 2024
-            </div>
-          </div>
-
-          <div class="card-body">
-            <p>Currus culpo eos. Carus correptius ullam. Cariosus qui ut.</p>
-
-            <p>Usus aiunt caste. Comedo tamisium amicitia. Aggero curso synagoga.</p>
-          </div>
-
-          <div class="card-footer">
-            Posted on Jan 15, 2024
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <div class="card-header">
-            <h1 class="h6 my-1">Intelligent Linen Computer</h1>
-
-            <div>
-              Expires on Apr 20, 2024
-            </div>
-          </div>
-
-          <div class="card-body">
-            <p>Culpa sunt adiuvo. Solum certe sperno. Cribro vesper administratio.</p>
-
-            <p>Amicitia tabella sit. Eum quo torqueo. Compello caste compono.</p>
-
-            <p>Patruus vesper qui. Aegrotatio carus dolorum. Vinco aequus atrox.</p>
-
-            <p>Paulatim celer voluptas. Alveus fugit desipio. Autem texo toties.</p>
-          </div>
-
-          <div class="card-footer">
-            Posted on Jan 27, 2024
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <div class="card-header">
-            <h1 class="h6 my-1">Dynamic Marketing Coordinator</h1>
-
-            <div>
-              Expires on Apr 25, 2024
-            </div>
-          </div>
-
-          <div class="card-body">
-            <p>Vilis agnosco nesciunt. Arto triduana sumptus. Tergeo carmen suppono.</p>
-
-            <p>Correptius aveho suscipio. Tabella civis voluptatem. Sursum deorsum votum.</p>
-
-            <p>Sollers sordeo communis. Capitulus canis audio. Deripio vado traho.</p>
-          </div>
-
-          <div class="card-footer">
-            Posted on Jan 27, 2024
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <div class="card-header">
-            <h1 class="h6 my-1">Enormous Steel Table</h1>
-
-            <div>
-              Expires on May  2, 2024
-            </div>
-          </div>
-
-          <div class="card-body">
-            <p>Minima admiratio conicio. Decipio autus tamdiu. Pel desipio id.</p>
-
-            <p>Solum uberrime odit. Adfectus surgo tamen. Verto nostrum curvus.</p>
-
-            <p>Trepide agnosco confugo. Volva spargo adulatio. Arbustum studio et.</p>
-          </div>
-
-          <div class="card-footer">
-            Posted on Feb 17, 2024
-          </div>
-        </div>
-      </div>
+      <% end %>
     </div>
   </div>
-
-  <div class="tab-pane fade" id="expired-tab-pane" role="tabpanel" aria-labelledby="expired-tab" tabindex="0">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="table-responsive">
-          <table class="table table-hover table-striped table-bordered">
-            <tbody>
+</div>
+</div>
+<div class="tab-pane fade" id="expired-tab-pane" role="tabpanel" aria-labelledby="expired-tab" tabindex="0">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <table class="table table-hover table-striped table-bordered">
+          <tbody>
+            <tr>
+              <th>Title</th>
+              <th>Body</th>
+              <th>Posted on</th>
+              <th>Expired on</th>
+            </tr>
+            <% @expired_posts.each do |a_post| %>
               <tr>
-                <th>Title</th>
-                <th>Body</th>
-                <th>Posted on</th>
-                <th>Expired on</th>
+                <td><%= a_post.title %></td>
+                <td><%= a_post.body %></td>
+                <td><%= a_post.created_at.strftime("%b %e, %Y") %></td>
+                <td><%= a_post.expires_on.strftime("%b %e, %Y") %></td>
               </tr>
-
-              <tr>
-                <td>Future IT Representative</td>
-                <td>Coniuratio sed colo. Clamo sequi enim. Porro virgo accendo.
-
-                  Vinitor uredo condico. Triginta decens absque. Cohibeo aggredior universe.</td>
-                <td>Dec 29, 2023</td>
-                <td>Feb 19, 2024</td>
-              </tr>
-              <tr>
-                <td>Intelligent Plastic Table</td>
-                <td>Corrigo sequi audio. Totidem quia sum. Clementia qui tamquam.
-
-                  Conforto casso apto. Demergo quam crapula. Quia depraedor adduco.
-
-                  Et cinis hic. Calculus adstringo delectatio. Fugiat sortitus victoria.
-
-                  Consequuntur solus tego. Amissio impedit ultra. Atavus ut voveo.</td>
-                <td>Dec 28, 2023</td>
-                <td>Feb 15, 2024</td>
-              </tr>
-              <tr>
-                <td>Intelligent Plastic Wallet</td>
-                <td>Conspergo cibus conicio. Turpe suffoco ascit. Demergo tamdiu volup.
-
-                  Esse tendo contra. Vox asperiores admoneo. Quas adflicto textor.
-
-                  Vinitor clementia defero. Auctus ut peior. Hic adsum aequus.</td>
-                <td>Dec  8, 2023</td>
-                <td>Feb 14, 2024</td>
-              </tr>
-              <tr>
-                <td>Durable Concrete Shirt</td>
-                <td>Tametsi despecto curo. Volutabrum virga adiuvo. Iusto dolor copia.
-
-                  Abeo adeptio ut. Velum patruus solus. Nobis eligendi tracto.
-
-                  Spiculum uredo clibanus. Caries comburo textus. Repellendus audeo acervus.
-
-                  Adnuo vado cometes. Correptius viduata placeat. Eum deripio molestiae.</td>
-                <td>Feb  4, 2024</td>
-                <td>Feb 11, 2024</td>
-              </tr>
-              <tr>
-                <td>Healthcare Manager</td>
-                <td>Arma advenio aveho. Corrupti aeneus suggero. Suadeo aspicio delectus.
-
-                  Accusator vehemens vulgus. Apud taceo asporto. Cometes doloremque verecundia.
-
-                  Suscipio pecco sint. Comburo sodalitas labore. Pauci clibanus bis.</td>
-                <td>Nov 25, 2023</td>
-                <td>Feb  8, 2024</td>
-              </tr>
-              <tr>
-                <td>Hospitality Officer</td>
-                <td>Autem pel baiulus. Tego strues suppellex. Ascisco conservo comburo.
-
-                  Occaecati aequus cibus. Timidus speciosus quasi. Avarus aranea ut.
-
-                  Summisse conspergo aeternus. Trado textor laudantium. Comitatus utroque illo.
-
-                  Timidus dens labore. Caelum attonbitus temeritas. Super ut arx.
-
-                  Via terror demulceo. Nemo stabilis blanditiis. Bibo at assumenda.</td>
-                <td>Dec 29, 2023</td>
-                <td>Feb  6, 2024</td>
-              </tr>
-              <tr>
-                <td>Government Orchestrator</td>
-                <td>Corpus minus non. Curriculum officia deripio. Dignissimos vobis conforto.
-
-                  Aut tergiversatio allatus. Repellat delinquo est. Suppellex curo delego.
-
-                  Contabesco similique crepusculum. Totam pauci turba. Apparatus audentia tonsor.
-
-                  Delicate deserunt nobis. Crinis aveho rerum. Crinis defero dolor.
-
-                  Magni alveus aspicio. Delego solus cerno. Ut vestrum arceo.</td>
-                <td>Jan 24, 2024</td>
-                <td>Feb  6, 2024</td>
-              </tr>
-              <tr>
-                <td>Rustic Cotton Shirt</td>
-                <td>Culpa acies cogo. Ulciscor defluo aqua. Cribro et aetas.
-
-                  Illo vorago arguo. Commemoro taedium est. Spero fugit alioqui.</td>
-                <td>Jan  6, 2024</td>
-                <td>Feb  1, 2024</td>
-              </tr>
-              <tr>
-                <td>Government Architect</td>
-                <td>Ara cogo confero. Pectus tergum credo. Excepturi animadverto conduco.
-
-                  Vapulus umquam creber. Tenuis nostrum ea. Depono casso angelus.
-
-                  Tantum cognatus vita. Denuo animus ara. Cariosus succedo patrocinor.</td>
-                <td>Dec 31, 2023</td>
-                <td>Jan 30, 2024</td>
-              </tr>
-              <tr>
-                <td>Lightweight Leather Shoes</td>
-                <td>Consequuntur conatus et. Vulticulus communis ademptio. Consequatur curvo vacuus.
-
-                  Arbitro cerno tempore. Cuius derelinquo clibanus. Paulatim vetus valde.
-
-                  Absque depono aspernatur. Altus est voluptatibus. Rerum necessitatibus suscipio.
-
-                  Spero demens rerum. Vis vulgus ventus. Tribuo caveo defendo.</td>
-                <td>Dec 16, 2023</td>
-                <td>Jan 23, 2024</td>
-              </tr>
-              <tr>
-                <td>Corporate Technician</td>
-                <td>Voluptas terror thalassinus. Alo vere cubitum. Turbo cetera vilis.
-
-                  Tristis depulso arbustum. Umerus sequi quia. Ullam qui quae.
-
-                  Depraedor dapifer demo. Defluo cruciamentum arcesso. Officiis et dolorem.
-
-                  Aperio termes decet. Apostolus aliquid quia. Caelestis deleniti et.</td>
-                <td>Oct 30, 2023</td>
-                <td>Jan 21, 2024</td>
-              </tr>
-              <tr>
-                <td>Legal Developer</td>
-                <td>Aureus culpa id. Ciminatio nemo sursum. Varietas aequitas quis.</td>
-                <td>Jan  8, 2024</td>
-                <td>Jan 19, 2024</td>
-              </tr>
-              <tr>
-                <td>Synergistic Wool Bag</td>
-                <td>Volva caecus vel. Talio hic sub. Delectus aliquam totus.
-
-                  Thalassinus totus sunt. Dedico video clam. Aranea ait demonstro.
-
-                  Aestas sed vado. Est bestia aperio. Neque vacuus verbera.
-
-                  Stella volubilis spes. Aequus tam crepusculum. Paens voluptatem aeternus.
-
-                  Vergo accedo casus. Adfectus villa et. Et unus careo.</td>
-                <td>Nov 10, 2023</td>
-                <td>Jan 19, 2024</td>
-              </tr>
-              <tr>
-                <td>Durable Marble Gloves</td>
-                <td>Vulgaris aperio traho. Turpe texo neque. Aliquid consequatur audio.
-
-                  Coniuratio pauper desidero. Defleo virga adstringo. Est conscendo pax.</td>
-                <td>Jan  2, 2024</td>
-                <td>Jan  9, 2024</td>
-              </tr>
-              <tr>
-                <td>Enormous Wool Bag</td>
-                <td>Artificiose cuius accendo. Deprecator accendo consequuntur. Omnis arx antepono.
-
-                  Tot officia anser. Est communis sit. Amissio taedium tres.
-
-                  Derideo adamo et. Ocer barba curia. Tutamen sufficio necessitatibus.
-
-                  Venustas natus vallum. Desidero spoliatio tutamen. Ullus vigor acquiro.
-
-                  Ab territo turbo. Clibanus aperio ventus. Defero tenax balbus.</td>
-                <td>Dec 12, 2023</td>
-                <td>Jan  4, 2024</td>
-              </tr>
-              <tr>
-                <td>Human Officer</td>
-                <td>Clibanus adfero texo. Sophismata facilis vester. Tribuo cornu facilis.
-
-                  Tenus canis cohaero. Tabula nihil aeger. Verbum cunae molestiae.
-
-                  Supplanto sonitus cultellus. Depereo atrox civis. Coruscus vespillo quis.</td>
-                <td>Dec 12, 2023</td>
-                <td>Jan  3, 2024</td>
-              </tr>
-              <tr>
-                <td>Lightweight Leather Coat</td>
-                <td>Temperantia beneficium tersus. Quae abduco arbitro. Aut aeneus autem.</td>
-                <td>Oct 27, 2023</td>
-                <td>Jan  2, 2024</td>
-              </tr>
-              <tr>
-                <td>Investor Director</td>
-                <td>Comis pel tutamen. Cubicularis utpote dolores. Subseco defessus porro.
-
-                  Cubitum clarus aperiam. Acsi capitulus tot. Conculco reprehenderit succurro.
-
-                  Cervus terror neque. Impedit colligo causa. Adficio accipio acquiro.
-
-                  Usque verbum xiphias. Commemoro crastinus amor. Coepi debitis credo.</td>
-                <td>Nov 12, 2023</td>
-                <td>Dec 30, 2023</td>
-              </tr>
-              <tr>
-                <td>Awesome Copper Bag</td>
-                <td>Dolor supra termes. Agnosco celo assumenda. Cras vivo subito.
-
-                  Cogito crebro necessitatibus. Debilito dignissimos labore. Avoco asporto desparatus.
-
-                  Aliquid canonicus claro. Doloribus tergo patria. Adiuvo attollo cupiditas.</td>
-                <td>Nov 20, 2023</td>
-                <td>Dec 26, 2023</td>
-              </tr>
-              <tr>
-                <td>Consulting Strategist</td>
-                <td>Sulum vita sed. Ea adaugeo capio. Beneficium cado amoveo.
-
-                  Vel confugo demoror. Demens quod beneficium. Beneficium adficio utroque.</td>
-                <td>Nov 27, 2023</td>
-                <td>Dec 16, 2023</td>
-              </tr>
-              <tr>
-                <td>Aerodynamic Wooden Watch</td>
-                <td>Consequatur sumptus cubitum. Doloremque amita volup. Acies vesica tum.</td>
-                <td>Oct 30, 2023</td>
-                <td>Nov 29, 2023</td>
-              </tr>
-              <tr>
-                <td>Aerodynamic Silk Knife</td>
-                <td>Amiculum creator tardus. Volaticus beatus curiositas. Cursim tamen decens.
-
-                  Convoco cubicularis sodalitas. Comparo compono aspernatur. Via pax repudiandae.
-
-                  Eum temporibus subvenio. Ambulo triduana cum. Sursum ea averto.
-
-                  Ago theatrum viridis. Cogito voluptate cariosus. Vitium est tres.</td>
-                <td>Nov  2, 2023</td>
-                <td>Nov 17, 2023</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+            <% end %>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
 </div>
-<h2>Active posts</h2>
-
-<table border="1">
-  <tr>
-    <th>Title</th>
-    <th>Body</th>
-    <th>Posted on</th>
-    <th>Expires on</th>
-  </tr>
-
-  <% @active_posts.each do |a_post| %>
-    <tr>
-      <td><%= a_post.title %></td>
-      <td><%= a_post.body %></td>
-      <td><%= a_post.created_at.strftime("%b %e, %Y") %></td>
-      <td><%= a_post.expires_on.strftime("%b %e, %Y") %></td>
-    </tr>
-  <% end %>
-</table>
-
-<h2>Expired posts</h2>
-
-<table border="1">
-  <tr>
-    <th>Title</th>
-    <th>Body</th>
-    <th>Posted on</th>
-    <th>Expired on</th>
-  </tr>
-
-  <% @expired_posts.each do |a_post| %>
-    <tr>
-      <td><%= a_post.title %></td>
-      <td><%= a_post.body %></td>
-      <td><%= a_post.created_at.strftime("%b %e, %Y") %></td>
-      <td><%= a_post.expires_on.strftime("%b %e, %Y") %></td>
-    </tr>
-  <% end %>
-</table>
+</div>
